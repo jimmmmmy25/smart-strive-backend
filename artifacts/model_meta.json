@@ -1,0 +1,101 @@
+{
+  "model": "RandomForest",
+  "feature_set": "questionnaire",
+  "features": [
+    "study_load",
+    "academic_performance",
+    "future_career_concerns",
+    "teacher_student_relationship",
+    "basic_needs",
+    "social_support",
+    "peer_pressure",
+    "bullying",
+    "extracurricular_activities",
+    "sleep_quality",
+    "living_conditions",
+    "safety",
+    "noise_level"
+  ],
+  "classes": [
+    "Low",
+    "Moderate",
+    "High"
+  ],
+  "feature_ranges": {
+    "study_load": [
+      0.0,
+      5.0
+    ],
+    "academic_performance": [
+      0.0,
+      5.0
+    ],
+    "future_career_concerns": [
+      0.0,
+      5.0
+    ],
+    "teacher_student_relationship": [
+      0.0,
+      5.0
+    ],
+    "basic_needs": [
+      0.0,
+      5.0
+    ],
+    "social_support": [
+      0.0,
+      3.0
+    ],
+    "peer_pressure": [
+      0.0,
+      5.0
+    ],
+    "bullying": [
+      0.0,
+      5.0
+    ],
+    "extracurricular_activities": [
+      0.0,
+      5.0
+    ],
+    "sleep_quality": [
+      0.0,
+      5.0
+    ],
+    "living_conditions": [
+      0.0,
+      5.0
+    ],
+    "safety": [
+      0.0,
+      5.0
+    ],
+    "noise_level": [
+      0.0,
+      5.0
+    ]
+  },
+  "feature_importance": {
+    "social_support": 0.06312877706690195,
+    "safety": 0.011081019745898835,
+    "study_load": 0.006894087537094566,
+    "future_career_concerns": 0.005144957691069204,
+    "noise_level": 0.005100249209190026,
+    "bullying": 0.004761580422936773,
+    "teacher_student_relationship": 0.004335682683803273,
+    "peer_pressure": 0.0035909147585575433,
+    "sleep_quality": 0.003501028948595075,
+    "extracurricular_activities": 0.00024722133553055267,
+    "basic_needs": -0.00017162467200736812,
+    "living_conditions": -0.0026968719141132746,
+    "academic_performance": -0.010244577049587204
+  },
+  "results": {
+    "RandomForest": {
+      "cv_f1_macro_mean": 0.8749428873535315,
+      "cv_f1_macro_std": 0.03150031670674661,
+      "test_accuracy": 0.8818181818181818,
+      "test_f1_macro": 0.8826104776809003
+    }
+  }
+}
