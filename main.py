@@ -34,13 +34,21 @@ app = FastAPI(title="SMART STRIVE Stress API", version="1.1")
 
 # Allow the React dev server to call this API from the browser.
 # Add your frontend's address here if it runs on a different port.
+# In main.py:
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173",
-                   "http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:5173", 
+        "http://127.0.0.1:5173",
+        "http://localhost:3000", 
+        "http://127.0.0.1:3000",
+        "https://vercel.app"  # <-- ADD THIS EXACT LINE (Make sure there is a comma above it)
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ---- Recommendation knowledge base (rule layer on top of ML prediction) ----
 # 'direction': "high" -> concern when value is in upper part of range,
